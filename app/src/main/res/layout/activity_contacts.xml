@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- 统计信息 -->
+    <TextView
+        android:id="@+id/tvContactCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="共 0 个联系人，0 个已启用"
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:padding="16dp"
+        android:gravity="center" />
+
+    <!-- 联系人列表 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerContacts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:clipToPadding="false" />
+
+    <!-- 添加按钮 -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_input_add"
+        app:tint="@android:color/white"
+        app:backgroundTint="@color/primary" />
+
+</LinearLayout>

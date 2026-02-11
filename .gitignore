@@ -1,0 +1,19 @@
+# llama.cpp 源码（太大，不上传，CI 自动克隆）
+llama.cpp/
+
+# Gradle
+.gradle/
+build/
+local.properties
+
+# Android Studio
+.idea/
+*.iml
+.DS_Store
+
+# APK
+*.apk
+*.aab
+
+# Build
+app/build/

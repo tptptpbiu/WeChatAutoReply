@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- 统计 -->
+    <TextView
+        android:id="@+id/tvLogCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="共 0 条记录"
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:padding="16dp"
+        android:gravity="center" />
+
+    <!-- 空提示 -->
+    <TextView
+        android:id="@+id/tvEmptyHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="暂无回复记录\n开启自动回复后，记录将显示在这里"
+        android:textSize="14sp"
+        android:textColor="@color/text_hint"
+        android:gravity="center"
+        android:padding="48dp"
+        android:visibility="gone" />
+
+    <!-- 日志列表 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerLogs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:clipToPadding="false" />
+
+</LinearLayout>

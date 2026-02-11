@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- 头部：联系人名称 + 时间 + 状态 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="6dp">
+
+            <TextView
+                android:id="@+id/tvStatusIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✅"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvContactName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="联系人"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginStart="6dp" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="02-11 12:00:00"
+                android:textSize="11sp"
+                android:textColor="@color/text_hint" />
+        </LinearLayout>
+
+        <!-- 收到的消息 -->
+        <TextView
+            android:id="@+id/tvReceived"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="收到: 在吗"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="2dp" />
+
+        <!-- 回复的消息 -->
+        <TextView
+            android:id="@+id/tvReplied"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="回复: 在的"
+            android:textSize="13sp"
+            android:textColor="@color/primary" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
