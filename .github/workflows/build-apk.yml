@@ -3,6 +3,8 @@ name: Build APK
 on:
   push:
     branches: [ main ]
+    tags:
+      - 'v*'
   workflow_dispatch:
 
 jobs:
@@ -41,9 +43,23 @@ jobs:
         chmod +x gradlew
         ./gradlew assembleDebug
     
-    - name: 上传 APK 文件
+    - name: 重命名 APK
+      run: |
+        mv app/build/outputs/apk/debug/app-debug.apk app/build/outputs/apk/debug/WeChatAutoReply-v${{ github.ref_name }}.apk || true
+        mv app/build/outputs/apk/debug/app-debug.apk app/build/outputs/apk/debug/WeChatAutoReply.apk || true
+
+    - name: 上传 APK (Artifact)
       uses: actions/upload-artifact@v4
       with:
         name: WeChatAutoReply
         path: app/build/outputs/apk/debug/*.apk
         retention-days: 90
+
+    - name: 发布到 GitHub Releases
+      if: startsWith(github.ref, 'refs/tags/v')
+      uses: softprops/action-gh-release@v1
+      with:
+        files: app/build/outputs/apk/debug/*.apk
+        generate_release_notes: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

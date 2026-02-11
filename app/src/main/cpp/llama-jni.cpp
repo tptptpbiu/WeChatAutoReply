@@ -144,7 +144,10 @@ Java_com_example_wechatautoreply_ai_LlamaEngine_nativeGenerate(
     LOGI("生成回复，prompt 长度: %zu", prompt_str.size());
 
     // 清空上下文中的 KV 缓存
-    llama_kv_cache_clear(g_llama.ctx);
+    llama_memory_t mem = llama_get_memory(g_llama.ctx);
+    if (mem) {
+        llama_memory_clear(mem, true);
+    }
 
     // Tokenize
     const int n_prompt_max = llama_n_ctx(g_llama.ctx);
