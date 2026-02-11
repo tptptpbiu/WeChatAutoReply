@@ -11,7 +11,6 @@
 #include <vector>
 
 #include "llama.h"
-#include "common.h"
 
 #define TAG "LlamaJNI"
 #define LOGI(...) __android_log_print(ANDROID_LOG_INFO, TAG, __VA_ARGS__)

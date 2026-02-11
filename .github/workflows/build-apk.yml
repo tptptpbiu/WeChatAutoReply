@@ -45,8 +45,8 @@ jobs:
     
     - name: 重命名 APK
       run: |
-        mv app/build/outputs/apk/debug/app-debug.apk app/build/outputs/apk/debug/WeChatAutoReply-v${{ github.ref_name }}.apk || true
-        mv app/build/outputs/apk/debug/app-debug.apk app/build/outputs/apk/debug/WeChatAutoReply.apk || true
+        cd app/build/outputs/apk/debug
+        mv *.apk WeChatAutoReply-v${{ github.ref_name || 'dev' }}.apk || true
 
     - name: 上传 APK (Artifact)
       uses: actions/upload-artifact@v4
