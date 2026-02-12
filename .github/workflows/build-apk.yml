@@ -27,8 +27,8 @@ jobs:
     
     - name: 安装 NDK 和 CMake
       run: |
-        sdkmanager "ndk;26.1.10909125" "cmake;3.22.1"
-        echo "ANDROID_NDK_HOME=$ANDROID_SDK_ROOT/ndk/26.1.10909125" >> $GITHUB_ENV
+        sdkmanager "ndk;25.1.8937393" "cmake;3.22.1"
+        echo "ANDROID_NDK_HOME=$ANDROID_SDK_ROOT/ndk/25.1.8937393" >> $GITHUB_ENV
 
     - name: 生成 Gradle Wrapper
       uses: gradle/actions/setup-gradle@v4
