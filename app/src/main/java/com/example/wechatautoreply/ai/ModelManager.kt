@@ -32,7 +32,7 @@ class ModelManager(private val context: Context) {
                 name = "Qwen2.5 1.5B（推荐）",
                 description = "中文对话最佳，约 1GB",
                 fileName = "qwen2.5-1.5b-instruct-q4_k_m.gguf",
-                downloadUrl = "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/main/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+                downloadUrl = "https://hf-mirror.com/Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/main/qwen2.5-1.5b-instruct-q4_k_m.gguf",
                 sizeBytes = 1_100_000_000L
             ),
             ModelInfo(
@@ -40,7 +40,7 @@ class ModelManager(private val context: Context) {
                 name = "Qwen2.5 0.5B（轻量）",
                 description = "极致轻量，约 400MB，效果稍弱",
                 fileName = "qwen2.5-0.5b-instruct-q4_k_m.gguf",
-                downloadUrl = "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/resolve/main/qwen2.5-0.5b-instruct-q4_k_m.gguf",
+                downloadUrl = "https://hf-mirror.com/Qwen/Qwen2.5-0.5B-Instruct-GGUF/resolve/main/qwen2.5-0.5b-instruct-q4_k_m.gguf",
                 sizeBytes = 400_000_000L
             ),
             ModelInfo(
@@ -48,7 +48,7 @@ class ModelManager(private val context: Context) {
                 name = "Qwen2.5 3B（高质量）",
                 description = "效果最好，约 2GB，需要 6GB+ 内存",
                 fileName = "qwen2.5-3b-instruct-q4_k_m.gguf",
-                downloadUrl = "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF/resolve/main/qwen2.5-3b-instruct-q4_k_m.gguf",
+                downloadUrl = "https://hf-mirror.com/Qwen/Qwen2.5-3B-Instruct-GGUF/resolve/main/qwen2.5-3b-instruct-q4_k_m.gguf",
                 sizeBytes = 2_000_000_000L
             )
         )
@@ -57,10 +57,11 @@ class ModelManager(private val context: Context) {
     private val modelsDir: File = File(context.filesDir, MODELS_DIR).also { it.mkdirs() }
 
     private val client = OkHttpClient.Builder()
-        .connectTimeout(30, TimeUnit.SECONDS)
-        .readTimeout(5, TimeUnit.MINUTES)
-        .writeTimeout(5, TimeUnit.MINUTES)
+        .connectTimeout(60, TimeUnit.SECONDS)
+        .readTimeout(30, TimeUnit.MINUTES)
+        .writeTimeout(30, TimeUnit.MINUTES)
         .followRedirects(true)
+        .followSslRedirects(true)
         .build()
 
     // 下载进度（0-100）

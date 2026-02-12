@@ -1,0 +1,651 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "llama.cpp/common/libcommon.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"add_compile_options",
+			"llama_add_compile_flags",
+			"target_compile_definitions",
+			"target_include_directories",
+			"target_compile_features"
+		],
+		"files" : 
+		[
+			"/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/CMakeLists.txt",
+			"/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/cmake/common.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 47,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 165,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 27,
+				"parent" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 117,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 106,
+				"parent" : 0
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 107,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wmissing-declarations"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wmissing-noreturn"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wextra"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wpedantic"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wcast-qual"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wno-unused-function"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wunreachable-code-break"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wunreachable-code-return"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wmissing-prototypes"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wextra-semi"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-pthread"
+				},
+				{
+					"fragment" : "-std=gnu++17"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "GGML_USE_CPU"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "LLAMA_USE_HTTPLIB"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 6,
+					"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/."
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/../vendor"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/src/../include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/ggml/src/../include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					7
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				3,
+				6,
+				7,
+				9,
+				11,
+				13,
+				15,
+				17,
+				20,
+				22,
+				23,
+				24,
+				26,
+				28,
+				30,
+				32,
+				34,
+				36,
+				38,
+				40,
+				42,
+				44,
+				46,
+				48,
+				50,
+				52,
+				54,
+				56
+			],
+			"sysroot" : 
+			{
+				"path" : "/Users/bianha/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/sysroot"
+			}
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "llama::@fb8c1886b26de7beabc1"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "build_info::@2c2f5d13aecf752ca753"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "cpp-httplib::@b43ff37152b620725440"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ggml-base::@94de48a0d5830e0c5d2f"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ggml::@94de48a0d5830e0c5d2f"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ggml-cpu::@94de48a0d5830e0c5d2f"
+		}
+	],
+	"id" : "common::@2c2f5d13aecf752ca753",
+	"name" : "common",
+	"nameOnDisk" : "libcommon.a",
+	"paths" : 
+	{
+		"build" : "llama.cpp/common",
+		"source" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				3,
+				6,
+				7,
+				9,
+				11,
+				13,
+				15,
+				17,
+				20,
+				22,
+				23,
+				24,
+				26,
+				28,
+				30,
+				32,
+				34,
+				36,
+				38,
+				40,
+				42,
+				44,
+				46,
+				48,
+				50,
+				52,
+				54,
+				56
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				4,
+				5,
+				8,
+				10,
+				12,
+				14,
+				16,
+				18,
+				19,
+				21,
+				25,
+				27,
+				29,
+				31,
+				33,
+				35,
+				37,
+				39,
+				41,
+				43,
+				45,
+				47,
+				49,
+				51,
+				53,
+				55
+			]
+		},
+		{
+			"name" : "Object Libraries",
+			"sourceIndexes" : 
+			[
+				57
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/arg.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/arg.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/base64.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/chat-parser.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/chat-parser.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/chat-parser-xml-toolcall.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/chat-parser-xml-toolcall.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/chat-peg-parser.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/chat-peg-parser.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/chat.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/chat.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/common.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/common.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/console.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/console.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/debug.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/debug.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/download.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/download.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/http.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/json-partial.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/json-partial.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/json-schema-to-grammar.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/llguidance.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/log.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/log.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/ngram-cache.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/ngram-cache.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/ngram-map.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/ngram-map.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/ngram-mod.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/ngram-mod.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/peg-parser.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/peg-parser.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/preset.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/preset.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/regex-partial.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/regex-partial.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/sampling.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/sampling.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/speculative.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/speculative.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/unicode.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/unicode.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/jinja/lexer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/jinja/lexer.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/jinja/parser.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/jinja/parser.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/jinja/runtime.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/jinja/runtime.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/jinja/value.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/jinja/value.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/jinja/string.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/jinja/string.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/jinja/caps.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/jinja/caps.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/app/.cxx/Debug/7124281r/arm64-v8a/license.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "/Users/bianha/Desktop/chat/WeChatAutoReply/app/.cxx/Debug/7124281r/arm64-v8a/llama.cpp/common/CMakeFiles/build_info.dir/build-info.cpp.o",
+			"sourceGroupIndex" : 2
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

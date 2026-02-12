@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "llama.cpp/vendor/cpp-httplib",
+		"source" : "/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/vendor/cpp-httplib"
+	}
+}
