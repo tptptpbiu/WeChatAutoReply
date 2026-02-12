@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.service.notification.NotificationListenerService
 import android.service.notification.StatusBarNotification
 import android.util.Log
-import androidx.core.app.RemoteInput
+import android.app.RemoteInput
 import com.example.wechatautoreply.ai.LlamaClient
 import com.example.wechatautoreply.data.ContactManager
 import com.example.wechatautoreply.data.ReplyLogManager
