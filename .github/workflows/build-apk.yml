@@ -30,16 +30,11 @@ jobs:
         sdkmanager "ndk;25.1.8937393" "cmake;3.22.1"
         echo "ANDROID_NDK_HOME=$ANDROID_SDK_ROOT/ndk/25.1.8937393" >> $GITHUB_ENV
 
-    - name: 生成 Gradle Wrapper
+    - name: 设置 Gradle 并编译
       uses: gradle/actions/setup-gradle@v4
       with:
         gradle-version: '8.2'
-    
-    - name: 初始化 Wrapper 并编译
-      run: |
-        gradle wrapper --gradle-version 8.2 --distribution-type bin
-        chmod +x gradlew
-        ./gradlew assembleDebug --no-daemon
+        arguments: assembleDebug --no-daemon
     
     - name: 上传 APK 文件
       uses: actions/upload-artifact@v4

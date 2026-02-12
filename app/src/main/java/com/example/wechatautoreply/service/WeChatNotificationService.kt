@@ -106,14 +106,33 @@ class WeChatNotificationService : NotificationListenerService() {
         // 1. 只处理微信通知
         if (sbn.packageName != WECHAT_PACKAGE) return
         
+        // #region agent log — 假设B/E: 记录收到微信通知
+        Log.w(TAG, "===== [DEBUG] 收到微信通知 =====")
+        // #endregion
+        
         // 2. 检查总开关
-        if (!settingsManager.isEnabled) return
+        if (!settingsManager.isEnabled) {
+            // #region agent log — 假设E: 总开关状态
+            Log.w(TAG, "[DEBUG][H5] 总开关未开启，isEnabled=false，跳过")
+            // #endregion
+            return
+        }
+        
+        // #region agent log — 假设E: 总开关通过
+        Log.w(TAG, "[DEBUG][H5] 总开关已开启 ✓")
+        // #endregion
         
         // 3. 检查 AI 是否就绪
         if (!llamaClient.isReady()) {
-            Log.d(TAG, "AI 模型未就绪，跳过")
+            // #region agent log — 假设C: AI模型未就绪
+            Log.w(TAG, "[DEBUG][H3] AI 模型未就绪，isReady()=false，跳过")
+            // #endregion
             return
         }
+        
+        // #region agent log — 假设C: AI就绪通过
+        Log.w(TAG, "[DEBUG][H3] AI 模型已就绪 ✓")
+        // #endregion
         
         // 4. 检查是否在工作时间
         if (!settingsManager.isWithinWorkHours()) {
@@ -130,18 +149,49 @@ class WeChatNotificationService : NotificationListenerService() {
         val notification = sbn.notification ?: return
         val extras = notification.extras ?: return
         
+        // #region agent log — 假设A/B: 转储通知原始数据
+        Log.w(TAG, "[DEBUG][H1H2] 通知原始数据:")
+        Log.w(TAG, "[DEBUG][H1H2]   android.title = '${extras.getCharSequence("android.title")}'")
+        Log.w(TAG, "[DEBUG][H1H2]   android.text = '${extras.getCharSequence("android.text")}'")
+        Log.w(TAG, "[DEBUG][H1H2]   android.subText = '${extras.getCharSequence("android.subText")}'")
+        Log.w(TAG, "[DEBUG][H1H2]   android.bigText = '${extras.getCharSequence("android.bigText")}'")
+        Log.w(TAG, "[DEBUG][H1H2]   notification.actions count = ${notification.actions?.size ?: 0}")
+        notification.actions?.forEachIndexed { i, action ->
+            Log.w(TAG, "[DEBUG][H4]   action[$i]: title='${action.title}', remoteInputs=${action.remoteInputs?.map { it.resultKey }}")
+        }
+        // #endregion
+        
         // 6. 提取发送者和消息
-        val sender = extractSender(extras) ?: return
-        val message = extractMessage(extras) ?: return
+        val sender = extractSender(extras)
+        if (sender == null) {
+            // #region agent log — 假设B: 提取发送者失败
+            Log.w(TAG, "[DEBUG][H2] extractSender 返回 null，title='${extras.getCharSequence("android.title")}'")
+            // #endregion
+            return
+        }
+        val message = extractMessage(extras)
+        if (message == null) {
+            // #region agent log — 假设A: 提取消息失败
+            Log.w(TAG, "[DEBUG][H1] extractMessage 返回 null，text='${extras.getCharSequence("android.text")}'")
+            // #endregion
+            return
+        }
         
         Log.d(TAG, "收到微信消息 - 发送者: $sender, 消息: $message")
         
         // 7. 匹配白名单联系人
         val contact = contactManager.findContactByName(sender)
         if (contact == null) {
-            Log.d(TAG, "发送者 $sender 不在白名单中，跳过")
+            // #region agent log — 假设B: 联系人匹配失败
+            val enabledContacts = contactManager.getEnabledContacts().map { it.name }
+            Log.w(TAG, "[DEBUG][H2] 联系人匹配失败 - sender='$sender', 已启用联系人=$enabledContacts")
+            // #endregion
             return
         }
+        
+        // #region agent log — 假设B: 联系人匹配成功
+        Log.w(TAG, "[DEBUG][H2] 联系人匹配成功 ✓ - sender='$sender', contact='${contact.name}'")
+        // #endregion
         
         // 8. 检查敏感词
         if (settingsManager.containsSensitiveWord(message)) {
@@ -164,9 +214,15 @@ class WeChatNotificationService : NotificationListenerService() {
         // 10. 获取通知的回复 Action
         val replyAction = findReplyAction(notification)
         if (replyAction == null) {
-            Log.w(TAG, "未找到回复 Action，无法自动回复")
+            // #region agent log — 假设A/D: 未找到回复Action
+            Log.w(TAG, "[DEBUG][H1H4] 未找到回复 Action！通知无法自动回复。actions=${notification.actions?.map { "${it.title}(inputs=${it.remoteInputs?.size})" }}")
+            // #endregion
             return
         }
+        
+        // #region agent log — 所有检查通过
+        Log.w(TAG, "[DEBUG] 所有检查通过 ✓，开始生成 AI 回复")
+        // #endregion
         
         // 11. 异步处理：生成 AI 回复并发送
         scope.launch {
