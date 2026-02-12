@@ -1,8 +1,0 @@
-/Users/bianha/Desktop/chat/WeChatAutoReply/app/src/main/cpp/CMakeLists.txt
-/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/CMakeLists.txt
-/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/common/CMakeLists.txt
-/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/ggml/CMakeLists.txt
-/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/ggml/src/CMakeLists.txt
-/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/ggml/src/ggml-cpu/CMakeLists.txt
-/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/src/CMakeLists.txt
-/Users/bianha/Desktop/chat/WeChatAutoReply/llama.cpp/vendor/cpp-httplib/CMakeLists.txt
